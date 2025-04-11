@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: lightyellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .login-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 350px;
+    }
+    h2 {
+        text-align: center;
+    }
+    .input-box {
+        margin-bottom: 15px;
+        position: relative;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input {
+        width: calc(100% - 30px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .icon {
+        position: absolute;
+        right: 10px;
+        top: 35px;
+        color: #555;
+    }
+    .remember {
+        display: flex;
+        align-items: center; /* Aligns checkbox and text */
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    .remember input {
+        margin-right: 5px; /* Brings checkbox closer to text */
+    }
+    .button {
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .button:hover {
+        background: #0056b3;
+    }
+</style>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="./login.js"></script>
+</head>
+<body style="background-image: url('background image.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+
+<header>
+<div class="login-container">
+<h2> Login </h2>
+<form action="login.php" method="POST" >
+<div class="input-box">
+<label>Username</label>
+<div>
+<input type="text"  name="username" id="usernamefield" required>
+<span class="icon"><ion-icon name="person"></ion-icon></span>
+</div>
+</div>
+<div class="input-box">
+<label>Password</label>
+<div>
+<input type="password" name="password" id="passwordfield"  required>
+<span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+</div>
+</div>
+<div class="remember">
+<input type="checkbox" id="rememberme">
+<label for="rememberme">Remember Me</label>
+</div>
+<button type="submit" id="loginbut" class="button">Login</button>
+</form>
+<div class="signup-link">
+    Don't have an account? <a href="register.php">Sign Up</a>
+</div>
+</div>
+</header>
+</body>
+</html>
